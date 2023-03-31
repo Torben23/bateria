@@ -1,21 +1,53 @@
-.App {
-  display: flex;
-  justify-content: center;
-  margin-top: 33vh;
+#drum-machine {
+  background-color: #2c3e50;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 0 auto;
+  max-width: 400px;
 }
 
+#display {
+  background-color: #fff;
+  color: #2c3e50;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 36px;
+  margin-bottom: 20px;
+  width: 95%;
+  height: 50px;
+  align-items: center;
+}
 
 .drum-pads {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  justify-content: space-between;
 }
 
 .drum-pad {
-  border: 1px solid black;
-  width: 100px;
+  background-color: #e74c3c;
+  color: #fff;
+  width: 100%;
   height: 100px;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 36px;
+  cursor: pointer;
 }
+
+.drum-pad:hover {
+  background-color: #c0392b;
+}
+
+.clip {
+  display: none;
+}
+
+.drum-pad:active .clip {
+  display: block;
+}
+
